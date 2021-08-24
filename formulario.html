@@ -133,7 +133,7 @@
         </ul>
     </nav>
     <div id="area">
-        <form  action="">
+        <form  action="" onsubmit="printarInfo()">
             <fieldset>
                 <legend><b>CAMPINHO DIGITAL</b></legend>
                 <br>
@@ -170,7 +170,19 @@
 
 
 </body>
-
+<script>
+    function printarInfo(){
+        let nome = document.getElementById("nome").value
+        let tel = document.querySelector("#telefone").value
+        let cidade = document.getElementById("cidade").value
+        let estado = document.getElementById("estado").value
+        if(estado == "RJ" || "Rio de Janeiro"){
+            alert(`Sua cidade é ${cidade} e seu Estado é ${estado}.`)
+        } else{
+            alert(`Você não é do Rio de Janeiro.`)
+        }
+    }
+</script>
 
 
 </html>
